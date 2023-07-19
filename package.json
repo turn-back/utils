@@ -1,0 +1,32 @@
+{
+	"name": "learnjts",
+	"version": "1.1.1",
+	"description": "Learn JS and TS through actual combat",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "jest",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs",
+		"tsc": "tsc src/typeScript/base.ts && node src/typeScript/base.js"
+	},
+	"jest": {
+		"collectCoverage": true
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dongyuanwai/learnts.git"
+	},
+	"author": "yuanwai",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dongyuanwai/learnts/issues"
+	},
+	"homepage": "https://github.com/dongyuanwai/learnts#readme",
+	"devDependencies": {
+		"@babel/plugin-transform-modules-commonjs": "^7.17.9",
+		"@types/node": "^20.4.2",
+		"eslint": "^8.14.0",
+		"jest": "^28.0.2"
+	}
+}
