@@ -1,4 +1,4 @@
-import { CamelizeType, ToArrayType } from "../types/base";
+import { CamelizeType, ToArrayType, IsArrayLikeType } from "../types/base";
 /**
  * 横线分隔字符串转驼峰
  * @param {string} str eg. user-id => userId
@@ -42,7 +42,12 @@ export const toArray: ToArrayType<number> = (list, start = 0) => {
 	return result;
 };
 
-function isArrayLike(obj: any): obj is ArrayLike<any> {
+/**
+ * 伪数组判定
+ * @param obj
+ * @returns boolean
+ */
+export const isArrayLike: IsArrayLikeType = obj => {
 	if (obj && typeof obj === "object") {
 		return (
 			typeof obj.length === "number" &&
@@ -50,4 +55,4 @@ function isArrayLike(obj: any): obj is ArrayLike<any> {
 		);
 	}
 	return false;
-}
+};

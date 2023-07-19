@@ -3,5 +3,9 @@ export interface CamelizeType {
 }
 
 export interface ToArrayType<T> {
-	(lsit: ArrayLike<T>, sep?: T): T[];
+	(list: ArrayLike<T>, sep?: T): T[];
+}
+
+export interface IsArrayLikeType {
+	(obj: any): boolean;
 }

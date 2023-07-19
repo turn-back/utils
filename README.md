@@ -1,22 +1,22 @@
 
 # 目的
-Learnjts是一个JavaScript实用工具库，里面有各种常用的工具方法
+my_util_back是一个JavaScript实用工具库，里面有各种常用的工具方法
 
-Learnjts 是我在进行真实项目时，常用到的一些工具方法；并且为了加深学习js知识而总结产生的,在项目里我写了大量的注释以及实现的思想和步骤
+my_util_back 是我在进行真实项目时，常用到的一些工具方法；并且为了加深学习js知识而总结产生的,在项目里我写了大量的注释以及实现的思想和步骤
 
-所以你不仅可以将learnjts引入到你的项目中，还可以借助此文档来学习js
+所以你不仅可以将my_util_back引入到你的项目中，还可以借助此文档来学习js
 
 # 安装
 
 ```js
-npm install learnjts
+npm install my_util_back
 ```
 
 # 使用
 
 ```js
 // 首先先引入需要的方法名
-import getDataType from 'learnjts';
+import getDataType from 'my_util_back';
 
 //再直接调用
 getDataType(100) //会返回 number
@@ -30,7 +30,7 @@ getDataType(100) //会返回 number
 4. debounce    防抖
 5. throttle    节流
 
-详细内容移步此文档[Learnjts文档](https://dongyuanwai.github.io/learnjtsdoc/)
+详细内容移步此文档[my_util_back文档](https://dongyuanwai.github.io/my_util_backdoc/)
 
 
 ## 提交规范
