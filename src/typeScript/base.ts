@@ -1,4 +1,4 @@
-import { CamelizeType, ToArrayType, IsArrayLikeType } from "../types/base";
+import { CommonFunType, ToArrayType, IsArrayLikeType } from "../types/base";
 /**
  * 横线分隔字符串转驼峰
  * @param {string} str eg. user-id => userId
@@ -6,7 +6,7 @@ import { CamelizeType, ToArrayType, IsArrayLikeType } from "../types/base";
  * @returns {string}
  */
 
-export const camelize: CamelizeType = (str, sep) => {
+export const camelize: CommonFunType<string> = (str, sep) => {
 	const camelizeRE = /-(\w)/g;
 	const camelizeXRE = /_(\w)/g;
 	let regexp: RegExp;
@@ -56,3 +56,16 @@ export const isArrayLike: IsArrayLikeType = obj => {
 	}
 	return false;
 };
+
+/**
+ * 驼峰命名转链接符
+ * @param str
+ * @param sep
+ * @returns
+ */
+export const hyphenate: CommonFunType<string> = (str, sep = "-") => {
+	const regexp = /\B([A-Z])/g;
+	return str.replace(regexp, `${sep}$1`).toLowerCase();
+};
+
+console.log(hyphenate("uSerId"));

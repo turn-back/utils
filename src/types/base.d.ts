@@ -1,5 +1,10 @@
-export interface CamelizeType {
-	(str: string, sep: string): string;
+/**
+ * @param {str:T}
+ * @param {sep?:T}
+ * @returns {T}
+ */
+export interface CommonFunType<T> {
+	(str: T, sep?: T): T;
 }
 
 export interface ToArrayType<T> {
